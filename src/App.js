@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>hello I am Sara. This is my first react app deploy</h1>
+        <h1>hello I am Sara. This is my first react app deploy. its way more difficult than I thought :P</h1>
       </div>
     );
   }
