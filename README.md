@@ -1,3 +1,52 @@
+Link to view the React app
+https://sarasghar.github.io/react-deploy/
+
+following are the steps I followed to deploy this react app
+1. install node.js and git on machine
+2. npm install -g create-react-app
+3. create-react-app my-app --scripts-version 1.1.5
+4. cd my app/
+5. npm start
+
+installing github pages
+
+6. ctrl C
+7. npm install gh-pages --save-dev
+8. Open project in VS code and file package.json
+9. add a line on top just above name "homepage": "http://github.com/sarasghar/react-deploy",
+10. Add these two lines under "scripts", "predeploy": "npm run build",
+    "deploy": "gh-pages -d build", 
+scripts section should look like this 
+
+"scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+
+11. cd to my-app 
+12. git init
+13. git remote add origin https://github.com/sarasghar/react-deploy.git
+14. make changes to your app and save
+15. ctrl C (to exit terminal)
+16. git status
+17, git add . 
+18. git commit -m "your comment"
+19. git push --origin master
+20. npm run deploy (use git bash)
+
+
+====================
+ERRORS SOLN
+===================
+gh-pages already exists
+run command
+rm -rf node_modules/gh-pages/.cache
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
